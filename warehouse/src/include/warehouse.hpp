@@ -15,4 +15,5 @@ public:
 
     Warehouse();
     void addEmployee(Employee employee);
+    void Warehouse::addShelf(Shelf shelf);
 };

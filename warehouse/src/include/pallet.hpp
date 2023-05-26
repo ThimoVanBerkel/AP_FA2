@@ -18,8 +18,8 @@ public:
     int getItemCount();
     int getRemainingSpace();
     bool relocateEmptyPallet(std::string itemName, int itemCapacity);
-    bool setItemCapacity(int itemCapacity);
-    bool setItemName(std::string itemName);
     bool takeOne();
     bool putOne();
+    bool isEmpty() const;
+    bool isFull() const;
 };

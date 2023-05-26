@@ -5,13 +5,15 @@
 #include <vector>
 #include <array>
 
-#include "pallet.hpp"
+#include "include/pallet.hpp"
+#include "include/icontainer.hpp"
 
-class Shelf
+class Shelf : public Icountainer
 {
-private:
-    std::array<Pallet, 4> Pallets;
 public:
+    std::array<Pallet, 4> Pallets;
     Shelf();
     bool swapPallet(int slot1, int slot2);
-};
+    bool isEmpty() override;
+    bool isFull() override;
+};  
