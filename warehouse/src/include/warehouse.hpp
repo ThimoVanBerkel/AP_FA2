@@ -9,11 +9,12 @@
 
 class Warehouse
 {
-private:
-    std::vector<Employee> Employees;
 public:
-
+    std::vector<Employee> Employees;
+    std::vector<Shelf> Shelves;
     Warehouse();
     void addEmployee(Employee employee);
-    void Warehouse::addShelf(Shelf shelf);
+    void addShelf(Shelf shelf);
+    bool rearrangeShelf(Shelf &Shelf);
+    bool pickItems(std::string itemName, int itemCount);
 };

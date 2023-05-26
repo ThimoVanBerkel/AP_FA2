@@ -4,14 +4,13 @@
 #include <list>
 #include <vector>
 #include <array>
+#include "icontainer.hpp"
+#include "pallet.hpp"
 
-#include "include/pallet.hpp"
-#include "include/icontainer.hpp"
-
-class Shelf : public Icountainer
+class Shelf : public IContainer
 {
 public:
-    std::array<Pallet, 4> Pallets;
+    std::array<Pallet, 4> pallets;
     Shelf();
     bool swapPallet(int slot1, int slot2);
     bool isEmpty() override;
